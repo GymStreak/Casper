@@ -8,12 +8,12 @@ which templates loop over to generate a list of posts. --}}
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
         <img class="post-card-image"
-            srcset="https://res.cloudinary.com/gymstreak/image/fetch/w_300,c_fit,q_auto,f_auto,dpr_auto/{{img_url feature_image size="s"}} 300w,
-                    https://res.cloudinary.com/gymstreak/image/fetch/w_600,c_fit,q_auto,f_auto,dpr_auto/{{img_url feature_image size="m"}} 600w,
-                    https://res.cloudinary.com/gymstreak/image/fetch/w_1000,c_fit,q_auto,f_auto,dpr_auto/{{img_url feature_image size="l"}} 1000w,
-                    https://res.cloudinary.com/gymstreak/image/fetch/w_2000,c_fit,q_auto,f_auto,dpr_auto/{{img_url feature_image size="xl"}} 2000w"
+            srcset="https://res.cloudinary.com/gymstreak/image/fetch/w_300,c_fit,q_auto,f_auto,dpr_auto/https://blog.gymstreak.com{{img_url feature_image size="s"}} 300w,
+                    https://res.cloudinary.com/gymstreak/image/fetch/w_600,c_fit,q_auto,f_auto,dpr_auto/https://blog.gymstreak.com{{img_url feature_image size="m"}} 600w,
+                    https://res.cloudinary.com/gymstreak/image/fetch/w_1000,c_fit,q_auto,f_auto,dpr_auto/https://blog.gymstreak.com{{img_url feature_image size="l"}} 1000w,
+                    https://res.cloudinary.com/gymstreak/image/fetch/w_2000,c_fit,q_auto,f_auto,dpr_auto/https://blog.gymstreak.com{{img_url feature_image size="xl"}} 2000w"
             sizes="(max-width: 1000px) 400px, 800px"
-            src="https://res.cloudinary.com/gymstreak/image/fetch/w_600,c_fit,q_auto,f_auto,dpr_auto/{{img_url feature_image size="m"}}"
+            src="https://res.cloudinary.com/gymstreak/image/fetch/w_600,c_fit,q_auto,f_auto,dpr_auto/https://blog.gymstreak.com{{img_url feature_image size="m"}}"
             alt="{{title}}"
             loading="lazy"
         />
@@ -42,7 +42,7 @@ which templates loop over to generate a list of posts. --}}
                 <li class="author-list-item">
                     {{#if profile_image}}
                     <a href="{{url}}" class="static-avatar">
-                        <img class="author-profile-image" src="https://res.cloudinary.com/gymstreak/image/fetch/c_fit,q_auto,f_auto,dpr_auto/{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                        <img class="author-profile-image" src="https://res.cloudinary.com/gymstreak/image/fetch/c_fit,q_auto,f_auto,dpr_auto/https://blog.gymstreak.com{{img_url profile_image size="xs"}}" alt="{{name}}" />
                     </a>
                     {{else}}
                     <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
