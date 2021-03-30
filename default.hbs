@@ -128,29 +128,9 @@ $(document).ready(function () {
 </script>
 <script src="https://cdn.jsdelivr.net/gh/gmfmi/searchinghost-easy@latest/dist/searchinghost-easy-basic.js"></script>
 <script>
-
-
-        var searchinGhost = new SearchinGhost({
-            // Example API using Ghost demo website
-            key: '2bf70c5c9a79d4bdef53fb3be9',
-            url: 'https://blog.gymstreak.com',
-            debug: true,
-            searchOn: 'keyup',
-            loadOn: 'page',
-            limit: 12,
-            // cacheMaxAge: 0,
-            onSearchEnd: function(posts) {
-                var counter = posts.length;
-                var foundElement = document.getElementById('search-bar-items-found');
-                if (counter <= 1) {
-                    foundElement.textContent = `${counter} post found`;
-                } else {
-                    foundElement.textContent = `${counter} posts found`;
-                }
-            }
-        });
-
-
+  new SearchinGhostEasy({
+        key: '2bf70c5c9a79d4bdef53fb3be9'
+    });
 </script>
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
 {{ghost_foot}}
